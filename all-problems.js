@@ -7,7 +7,6 @@ function calculateMoney(ticketSale){
     return leftMoney;
   }
 }
-
 // ---------------------------------------------
 function checkName(name) {
   if (typeof (name) !== "string") {
@@ -20,7 +19,6 @@ function checkName(name) {
     return "Bad Name";
   }
 }
-
 // ---------------------------------------------
 function deleteInvalids(array) {
   if(!Array.isArray(array)){
@@ -36,7 +34,6 @@ function deleteInvalids(array) {
 
   return arrayOfNumbers;
 }
-
 // -----------------------------------------------
 function password(object) {
   if (object.name && object.birthYear && object.siteName && object.birthYear >= 1000 && object.birthYear <= 9999) {
@@ -49,7 +46,6 @@ function password(object) {
 
   return "invalid";
 }
-
 // -----------------------------------------------
 function monthlySavings(arr, livingCost) {
   if (!Array.isArray(arr) || typeof livingCost !== "number") {
@@ -74,3 +70,9 @@ function monthlySavings(arr, livingCost) {
     return `earn more`;
   }
 }
+
+
+console.log(calculateMoney(10));
+console.log(calculateMoney(1055));
+console.log(calculateMoney(93));
+console.log(calculateMoney(-130));
