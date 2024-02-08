@@ -7,10 +7,13 @@ function calculateMoney(ticketSale){
     return leftMoney;
   }
 }
-// ---------------------------------------------
+
+
+
+
 function checkName(name) {
   if (typeof (name) !== "string") {
-    return "Invalid input.";
+    return "invalid";
   }
   const z = name[name.length - 1].toLowerCase();
   if (z === 'a' || z === 'e' || z === 'i' || z === 'o' || z === 'u' || z === 'w' || z === 'y') {
@@ -19,7 +22,10 @@ function checkName(name) {
     return "Bad Name";
   }
 }
-// ---------------------------------------------
+
+
+
+
 function deleteInvalids(array) {
   if(!Array.isArray(array)){
     return "invalid";
@@ -34,19 +40,23 @@ function deleteInvalids(array) {
 
   return arrayOfNumbers;
 }
-// -----------------------------------------------
-function password(object) {
-  if (object.name && object.birthYear && object.siteName && object.birthYear >= 1000 && object.birthYear <= 9999) {
-    const name = object.name;
-    const birthYear = object.birthYear;
-    const siteName = object.siteName.charAt(0).toUpperCase() + object.siteName.slice(1);
+
+
+
+function password(obj) {
+  if (obj.name && obj.birthYear && obj.siteName && obj.birthYear >= 1000 && obj.birthYear <= 9999) {
+    const name = obj.name;
+    const birthYear = obj.birthYear;
+    const siteName = obj.siteName.charAt(0).toUpperCase() + obj.siteName.slice(1);
     return `${siteName}#${name}@${birthYear}`;
   }
 
 
   return "invalid";
 }
-// -----------------------------------------------
+
+
+
 function monthlySavings(arr, livingCost) {
   if (!Array.isArray(arr) || typeof livingCost !== "number") {
     return "invalid input";
@@ -70,9 +80,3 @@ function monthlySavings(arr, livingCost) {
     return `earn more`;
   }
 }
-
-
-console.log(calculateMoney(10));
-console.log(calculateMoney(1055));
-console.log(calculateMoney(93));
-console.log(calculateMoney(-130));
